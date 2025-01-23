@@ -9,7 +9,7 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
-Route::resource('/estudiantes', EstudianteController::class);
+// By fcva
+Route::resource('/roles', RoleController::class);
 
-// Route::resource('/clientes', ClienteController::class);
-// Route::resource('/vehiculos', VehiculoController::class);
+Route::resource('/estudiantes', EstudianteController::class);
