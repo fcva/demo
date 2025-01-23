@@ -5,7 +5,8 @@ import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import { Head } from '@inertiajs/vue3';
 
 defineProps({
-    saludo: String
+    saludo: String,
+    roles: Array
 })
 
 </script>
@@ -25,6 +26,12 @@ defineProps({
                 <div class="overflow-hidden bg-white shadow-sm sm:rounded-lg">
                     <div class="p-6 text-gray-900">
                         {{ saludo }}
+                    </div>
+                </div>
+
+                <div class="overflow-hidden bg-white shadow-sm sm:rounded-lg">
+                    <div class="p-6 text-gray-900">
+                        {{ roles }}
                     </div>
                 </div>
             </div>
