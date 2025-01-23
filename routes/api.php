@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Estudiante\EstudianteController;
 use App\Http\Controllers\Role\RoleController;
+use App\Http\Controllers\Cliente\ClienteController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -11,5 +12,5 @@ Route::get('/user', function (Request $request) {
 
 Route::resource('/estudiantes', EstudianteController::class);
 
-// Route::resource('/clientes', ClienteController::class);
+Route::resource('/clientes', ClienteController::class);
 // Route::resource('/vehiculos', VehiculoController::class);
