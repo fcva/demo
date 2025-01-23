@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\{User,Role};
+use App\Models\{User,Role, Estudiante};
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -20,6 +20,8 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
         ]);*/
 
-        Role::factory()->times(21)->create();
+        // Role::factory()->times(21)->create();
+
+        Estudiante::factory()->times(18)->create();
     }
 }
