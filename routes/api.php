@@ -1,5 +1,8 @@
 <?php
 
+// use App\Http\Controllers\Administrator\AdministratorController;
+
+use App\Http\Controllers\Administrator\AdministratorController;
 use App\Http\Controllers\Estudiante\EstudianteController;
 use App\Http\Controllers\Role\RoleController;
 use App\Http\Controllers\Cliente\ClienteController;
@@ -15,5 +18,10 @@ Route::resource('/roles', RoleController::class);
 
 Route::resource('/estudiantes', EstudianteController::class);
 
-// Route::resource('/clientes', ClienteController::class);
+Route::resource('/clientesss', ClienteController::class);
 // Route::resource('/vehiculos', VehiculoController::class);
+
+
+// By Adler
+Route::resource('/administrator', AdministratorController::class);
+//-----
