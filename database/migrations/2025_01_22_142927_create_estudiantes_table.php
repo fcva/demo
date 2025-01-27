@@ -18,6 +18,7 @@ return new class extends Migration
             $table->date('fecha_nacimiento');
             $table->string('direccion');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

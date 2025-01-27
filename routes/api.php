@@ -16,6 +16,7 @@ Route::get('/user', function (Request $request) {
 // By fcva
 Route::resource('/roles', RoleController::class);
 
+// By Danniels
 Route::resource('/estudiantes', EstudianteController::class);
 
 Route::resource('/clientesss', ClienteController::class);
