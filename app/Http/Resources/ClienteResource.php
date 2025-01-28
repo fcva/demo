@@ -17,10 +17,10 @@ class ClienteResource extends JsonResource
         return [
             'id'            => $this->id,
             'nombre'        => $this->nombre,
-            'apellido'   => $this->apellido,
-            'edad'     => $this->edad,
-            'telefono'   => $this->telefono,
-            'correo'     => $this->correo,
+            'apellido'      => $this->apellido,
+            'edad'          => $this->edad,
+            'telefono'      => $this->telefono,
+            'correo'        => $this->correo,
         ];
     }
 }

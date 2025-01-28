@@ -19,7 +19,9 @@ Route::resource('/roles', RoleController::class);
 // By Danniels
 Route::resource('/estudiantes', EstudianteController::class);
 
-Route::resource('/clientesss', ClienteController::class);
+//By Kenny
+Route::resource('/clientes', ClienteController::class);
+
 // Route::resource('/vehiculos', VehiculoController::class);
 
 
