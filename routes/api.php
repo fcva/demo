@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\Administrator\AdministratorController;
 use App\Http\Controllers\Estudiante\EstudianteController;
-use App\Http\Controllers\Role\RoleController;
+use App\Http\Controllers\Role\ApiRoleController;
 use App\Http\Controllers\Cliente\ClienteController;
 use App\Http\Controllers\Producto\ProductoController;
 use App\Http\Controllers\Libro\LibroControllers;
@@ -14,7 +14,7 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 // By fcva
-Route::resource('/roles', RoleController::class);
+Route::resource('/roles', ApiRoleController::class);
 
 // By Danniels
 Route::resource('/estudiantes', EstudianteController::class);

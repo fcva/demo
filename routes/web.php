@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Role\RoleIndexController;
+use App\Http\Controllers\Role\RoleController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -22,7 +22,12 @@ Route::get('/dashboard', function () {
 
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/roles/index', RoleIndexController::class)->name('roles.index');
+// Route::get('/roles/index', [RoleController::class, 'index'])->name('roles.index');
+// Route::view('/rol', 'roles')->name('rol');
+
+Route::get('/roles/rol', function () {
+    return Inertia::render('Roles/Rol');
+})->name('roles.rol');
 
 
 

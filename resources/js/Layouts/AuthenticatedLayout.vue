@@ -39,8 +39,15 @@ const showingNavigationDropdown = ref(false);
                                 </NavLink>
                             </div>
 
-                            <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                            <!-- <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                                 <NavLink :href="route('roles.index')">
+                                    Roles
+                                </NavLink>
+                            </div> -->
+
+                            <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                                <NavLink :href="route('roles.rol')">
+                                    <!-- <router-link to="/roles/rol">Rol</router-link> -->
                                     Roles
                                 </NavLink>
                             </div>

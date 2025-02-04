@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 
-class RoleController extends Controller
+class ApiRoleController extends Controller
 {
     public function index(Request $request) {
 
