@@ -11,11 +11,18 @@ import { createRouter, createWebHistory } from 'vue-router';
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 const pinia = createPinia(); // instancia de pinia creado
 
+//By Danniels
+import Estudiante from '@/Pages/Estudiantes/Estudiante.vue';
+
 import Rol from '@/Pages/Roles/Rol.vue';
 
 const routes = [
     { path: '/roles/rol', component: Rol },
+
+    //By Danniels
+    { path: '/estudiantes/estudiante', component: Estudiante}
 ]
+
 
 const router = createRouter({
     history: createWebHistory(),

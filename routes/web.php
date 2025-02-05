@@ -29,7 +29,10 @@ Route::get('/roles/rol', function () {
     return Inertia::render('Roles/Rol');
 })->name('roles.rol');
 
-
+//By Danniels
+Route::get('/estudiantes/estudiante', function(){
+    return Inertia::render('Estudiantes/Estudiante');
+})->name('estudiantes.estudiante');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
