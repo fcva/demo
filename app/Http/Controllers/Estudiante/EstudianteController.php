@@ -12,7 +12,7 @@ class EstudianteController extends Controller
 {
     public function index(Request $request)
     {
-        $per_page = request()->get('per_page') ?:6;
+        $per_page = request()->get('per_page') ?:20;
 
         return EstudianteResource::collection(Estudiante::paginate($per_page));
     }

@@ -54,7 +54,7 @@ const showingNavigationDropdown = ref(false);
 
                              <!-- By Danniels -->
                             <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                                <NavLink :href="route('estudiantes.estudiante')">
+                                <NavLink :href="route('estudiantes.index')">
                                     Estudiantes
                                 </NavLink>
                             </div>

@@ -9,6 +9,29 @@ const index = useIndexStore()
 index.module = 'estudiantes'
 index.getItems()
 
+import { Link } from '@inertiajs/vue3';
+
+const showEstudiante = (id) => {
+    router.visit(route('estudiantes.show', id)); // Redirige a /estudiantes/estudiante/{id}
+}
+
+import { router } from '@inertiajs/vue3';
+
+const editarEstudiante = (id) => {
+    router.visit(route('estudiantes.edit', id)); // Redirige a /estudiantes/estudiante/{id}/edit
+};
+
+const crearEstudiante = () => {
+    router.visit(route('estudiantes.create')); // Redirige a /estudiantes/create
+};
+
+const eliminarEstudiante = (id) => {
+    router.visit(route('estudiantes.destroy', id), {
+        method: 'delete',
+        preserveScroll: true
+    });
+}
+
 </script>
 
 <template>
@@ -35,7 +58,7 @@ index.getItems()
                             Lista de Estudiantes
                         </div>
                         <div class="p-3 flex justify-end"> 
-                            <button class="bg-green-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded-none">
+                            <button @click="crearEstudiante" class="bg-green-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded-none">
                                 Nuevo
                             </button>
                         </div>
@@ -66,18 +89,20 @@ index.getItems()
                                     <td class="border border-gray-300">{{ item.fecha_nacimiento }}</td>
                                     <td class="border border-gray-300">{{ item.direccion }}</td>
                                     <td class="border border-gray-300">
-                                        <button class="px-2 py-1 text-sm font-medium rounded-md bg-teal-500 text-white hover:bg-blue-700">
-                                            ver
+                                        
+                                        <button @click="showEstudiante(item.id)" class="px-2 py-1 text-sm font-medium rounded-md bg-teal-500 text-white hover:bg-blue-700">
+                                            Ver
+                                        </button>
+
+                                    </td>
+                                    <td class="border border-gray-300">
+                                        <button @click="editarEstudiante(item.id)" class="bg-yellow-500 text-white px-3 py-1 rounded">
+                                            Editar
                                         </button>
                                     </td>
                                     <td class="border border-gray-300">
-                                        <button class="px-2 py-1 text-sm font-medium rounded-md bg-yellow-500 text-white hover:bg-blue-700">
-                                            editar
-                                        </button>
-                                    </td>
-                                    <td class="border border-gray-300">
-                                        <button class="px-2 py-1 text-sm font-medium rounded-md bg-red-500 text-white hover:bg-blue-700">
-                                            eliminar
+                                        <button @click="eliminarEstudiante(item.id)" class="px-2 py-1 text-sm font-medium rounded-md bg-red-500 text-white hover:bg-blue-700">
+                                            Eliminar
                                         </button>
                                     </td>
                                 </tr>
