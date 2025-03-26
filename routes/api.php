@@ -15,18 +15,3 @@ Route::get('/user', function (Request $request) {
 
 // By fcva
 Route::resource('/roles', ApiRoleController::class);
-
-// By Danniels
-Route::resource('/estudiantes', EstudianteController::class);
-
-// By Kenny
-Route::resource('/clientes', ClienteController::class);
-
-// By Jeferson
-Route::resource('/productos', ProductoController::class);
-
-// By Adler
-Route::resource('/administrator', AdministratorController::class);
-
-//By raul
-Route::resource('/libros', LibroControllers::class);
