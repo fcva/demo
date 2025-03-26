@@ -31,10 +31,7 @@ Route::get('/roles/rol', function () {
 })->name('roles.rol');
 
 // By Adler
-
-Route::resource('providers', ProviderController::class)
-    ->middleware(['auth', 'verified']);
-
+Route::resource('providers', ProviderController::class)->middleware(['auth', 'verified']);
     
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
