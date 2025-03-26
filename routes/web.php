@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Role\RoleController;
+use App\Http\Controllers\Provider\ProviderController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -29,8 +30,12 @@ Route::get('/roles/rol', function () {
     return Inertia::render('Roles/Rol');
 })->name('roles.rol');
 
+// By Adler
 
+Route::resource('providers', ProviderController::class)
+    ->middleware(['auth', 'verified']);
 
+    
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
