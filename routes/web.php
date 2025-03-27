@@ -6,6 +6,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\Categoria\CategoriaController;
 
 Route::get('/', function () {
 
@@ -26,13 +27,17 @@ Route::get('/dashboard', function () {
 // Route::get('/roles/index', [RoleController::class, 'index'])->name('roles.index');
 // Route::view('/rol', 'roles')->name('rol');
 
+//ControllerCategoria
+Route::resource('categorias', CategoriaController::class);
+Route::post('categorias/{id}/restore', [CategoriaController::class, 'restore']);
+
 Route::get('/roles/rol', function () {
     return Inertia::render('Roles/Rol');
 })->name('roles.rol');
 
 // By Adler
 Route::resource('providers', ProviderController::class)->middleware(['auth', 'verified']);
-    
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
