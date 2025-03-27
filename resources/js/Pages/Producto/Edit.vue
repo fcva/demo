@@ -13,6 +13,8 @@ import { Head } from '@inertiajs/vue3';
             >
                 Dashboard
             </h2>
+
+           
         </template>
 
         <div class="py-12">
@@ -21,7 +23,7 @@ import { Head } from '@inertiajs/vue3';
                     class="overflow-hidden bg-white shadow-sm sm:rounded-lg"
                 >
                     <div class="p-6 text-gray-900">
-                        You're logged in!
+                  editar
                     </div>
                 </div>
             </div>

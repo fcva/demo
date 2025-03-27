@@ -1,6 +1,6 @@
 <script setup>
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
-import { Head } from '@inertiajs/vue3';
+import { Head, Link } from '@inertiajs/vue3';
 </script>
 
 <template>
@@ -13,6 +13,9 @@ import { Head } from '@inertiajs/vue3';
             >
                 Dashboard
             </h2>
+            <Link :href="route('producto.create')" >
+                    REGISTRAR PRODUCTO
+          </Link>
         </template>
 
         <div class="py-12">
@@ -21,7 +24,7 @@ import { Head } from '@inertiajs/vue3';
                     class="overflow-hidden bg-white shadow-sm sm:rounded-lg"
                 >
                     <div class="p-6 text-gray-900">
-                        You're logged in!
+                      Producto
                     </div>
                 </div>
             </div>
