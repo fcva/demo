@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\Role\RoleController;
+use App\Http\Controllers\Acl\Role\RoleController as AclRoleController;
+// use App\Http\Controllers\Role\RoleController;
 use App\Http\Controllers\Provider\ProviderController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
@@ -29,6 +30,11 @@ Route::get('/dashboard', function () {
 Route::get('/roles/rol', function () {
     return Inertia::render('Roles/Rol');
 })->name('roles.rol');
+
+// By fcva
+Route::resource('/acl/role', AclRoleController::class)->names([
+    'index' => 'acl.role.index'
+]);
 
 // By Adler
 Route::resource('providers', ProviderController::class)->middleware(['auth', 'verified']);
